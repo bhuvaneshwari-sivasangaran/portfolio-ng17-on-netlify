@@ -1,1 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root body {
+    font-family: 'Comic Sans MS', cursive;
+    /* background-color: #E9EBF0;
+    color: #24223e; */
+    background-color: #ffffff;
+    color: #121212;
+}
+
+.fs-4 {
+    color: #1338BE;
+}
+
+.link-class {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+
+.border-gradient::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #1338BE, #DCE9F8, #1338BE);
+}
+
+.container-fluid {
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.link-button-container {
+    text-align: center;
+    margin: 1.25rem;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #1338BE, #DCE9F8, #1338BE) !important;
+    color: #121212 !important;
+    border: none !important;
+    font-weight: 700 !important;
+}
+
+.btn-primary:hover {
+    background: #1338BE !important;
+    color: #ffffff !important;
+}
+
+.about-class {
+    padding: 2rem !important;
+}
+
+p {
+    letter-spacing: 1px;
+    line-height: 2rem;
+}
+
+.chart-div {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.color-mode-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: transform .3s ease;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+}
+
+.link {
+    text-decoration: none;
+    color: #1338BE;
+    font-weight: 700;
+}
+
+/* theme styles */
+
+.dark {
+    background-color: #1C1C1C !important;
+}
+
+.fa-sun {
+    color: #fce570;
+}
+
+.dark p, .dark h4 {
+    color: #ffffff;
+}
+
+
+.dark .fs-4 {
+    color: #1338BE;
+}
+
+.dark .btn-primary:hover {
+    background: #1338BE !important;
+}
+
+/* media styles */
+
+@media screen and (max-width: 1200px) {
+    .border-gradient::after {
+        width: 0 !important;
+    }
+}

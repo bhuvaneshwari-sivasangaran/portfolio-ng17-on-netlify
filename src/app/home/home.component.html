@@ -1,1 +1,80 @@
-<p>home works!</p>
+<div class="container-fluid row">
+    <div class="col-xl-3 col-lg-12 link-class">
+        <div class="border-gradient">
+            <div class="link-button-container">
+                <img src="/assets/image.png" alt="photo of Bhuvaneshwari Sivasangaran" height="265px" width="265px">
+            </div>
+            <div class="link-button-container mb-5">
+                <h4 class="fw-bold">Bhuvaneshwari Sivasangaran</h4>
+            </div>
+            <div class="link-button-container">
+                <a href="https://github.com/bhuvaneshwari-sivasangaran" class="btn btn-primary"
+                    target="_blank">Github</a>
+            </div>
+            <div class="link-button-container">
+                <a href="https://www.linkedin.com/in/bhuvaneshwari-sivasangaran/" class="btn btn-primary"
+                    target="_blank">Linkedin</a>
+            </div>
+            <div class="link-button-container">
+                <a href="mailto:bhuvaneshwari.sivasangaran@gmail.com" class="btn btn-primary">E-mail</a>
+            </div>
+            <div class="link-button-container">
+                <a href="/assets/Resume.pdf" target="_blank" class="btn btn-primary">Resume</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-9 col-lg-12 about-class">
+        <button class="color-mode-button" (click)="changeMode()" aria-label="Change Mode"><i class="fas fa-moon"></i></button>
+        <p class="fs-4 pt-4 pb-2">
+            Hi!
+        </p>
+        <p>
+            I am an enthusiastic developer with four years of experience in web design, integration, updates, testing,
+            and maintenance. Currently, I am pursuing a Web Development Postgraduate program in Canada, which is
+            enhancing my skills in web technologies and current trends.
+        </p>
+        <br>
+        <p style="margin-bottom: 2rem;">
+            I'm a results-driven front-end web developer with expertise in Angular. I specialize in creating and
+            optimizing websites and applications, including Synapt, a project focused on data analytics. Proficient in
+            rapid development, I've successfully delivered solutions like Network Failure Prediction and Non-Payment
+            Disconnect. Actively seeking opportunities to grow, learn, and contribute. Explore my projects on <a
+                class="link" href="https://github.com/bhuvaneshwari-sivasangaran" target="_blank">github</a> and
+            connect with me on <a class="link" href="https://www.linkedin.com/in/bhuvaneshwari-sivasangaran/"
+                target="_blank">linkedin</a> for relevant opportunities.
+        </p>
+        <div class="row">
+            <div class="col-lg-4 col-md-12 chart-div text-center" *ngIf="isBrowser">
+                <div class="d-flex flex-column">
+                    <p class="fs-4 mb-3">Programming Skills</p>
+                    <div>
+                        <canvas baseChart [data]="barChartData" [options]="barChartOptions" [plugins]="barChartPlugins"
+                            [legend]="barChartLegend" [type]="'bar'"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 chart-div text-center" *ngIf="isBrowser">
+                <div class="d-flex flex-column">
+                    <p class="fs-4 mb-3">Interpersonal Skills</p>
+                    <div>
+                        <canvas baseChart [datasets]="radarChartDatasets" [options]="radarChartOptions"
+                            [labels]="radarChartLabels" [type]="'radar'">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 chart-div text-center" *ngIf="isBrowser">
+                <div class="d-flex flex-column">
+                    <p class="fs-4 mb-3">Experience</p>
+                    <div>
+                        <canvas baseChart [type]="'pie'" [datasets]="pieChartDatasets" [labels]="pieChartLabels"
+                            [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

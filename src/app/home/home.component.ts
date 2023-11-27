@@ -69,11 +69,13 @@ export class HomeComponent {
       main.classList.remove('dark');
       color_mode_button.remove('fa-sun');
       color_mode_button.add('fa-moon'); 
+      document.getElementsByTagName('source')[0].srcset = '/assets/image.webp'
       document.getElementsByTagName('img')[0].src = '/assets/image.png'
     } else {
       main.classList.add('dark');
       color_mode_button.remove('fa-moon');
       color_mode_button.add('fa-sun'); 
+      document.getElementsByTagName('source')[0].srcset = '/assets/image-dark.webp'
       document.getElementsByTagName('img')[0].src = '/assets/image-dark.png'
     }
   }
